@@ -9,7 +9,7 @@ public class inimigo : MonoBehaviour
     public float stoppingDistance;
     private Transform target;
     int cont = 0;
-
+    public static bool iM;
 
         void Start()
     {
@@ -36,6 +36,7 @@ public class inimigo : MonoBehaviour
            if(cont >= 3)
            {
                Destroy(this.gameObject);
+                iM = true;
            }
              Destroy(collision.gameObject);
            

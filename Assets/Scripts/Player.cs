@@ -8,14 +8,16 @@ public class Player : MonoBehaviour
     public GameObject bala;
     public static int cont = 5;
     public static bool dano;
-    public SpriteRenderer sprite; 
-
+    public SpriteRenderer sprite;
+    public static int pontos;
+    public int c;
   
     
     // Start is called before the first frame update
     void Start()
     {
     dano = false;
+        c = pontos;
     }
 
     // Update is called once per frame
@@ -29,7 +31,16 @@ public class Player : MonoBehaviour
         {
             Instantiate(bala, transform.position + new Vector3(dir.x/105, dir.y/105), transform.rotation * new Quaternion(0f, 0f, 90f, 0f) );
         }
-        
+
+        if (inimigo.iM == true)
+        {
+            pontos++;
+
+            inimigo.iM = false;
+
+        }
+
+        c = pontos;
     } 
     private void OnTriggerEnter2D(Collider2D collision)
     {
