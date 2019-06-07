@@ -7,11 +7,10 @@ public class bala : MonoBehaviour {
     [SerializeField]
     private float speed = 10;
      private int ponto;
-     public int score;
+     //public int score;
 
     void Start()
     {
-        int score = 0;
     }
 
     // Update is called once per frame
@@ -32,12 +31,12 @@ public class bala : MonoBehaviour {
       
           
         }
-        if(ponto >= 3)
+        /* if(ponto >= 3)
         {
           score ++;
 
 
-        }
+        }*/
 }
        
 }
